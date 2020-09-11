@@ -5,8 +5,28 @@
       <config />
     </shared>
   </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="3eab137c-7940-4daf-a3bf-a7782fd4120b" name="Default Changelist" comment="" />
+    <list default="true" id="3eab137c-7940-4daf-a3bf-a7782fd4120b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/topics/TopicsActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/topics/TopicsActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/topics/TopicsFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/topics/TopicsFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_topics.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_topics.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,6 +45,9 @@
       </state>
     </system>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1hC5u8OECHbqGAQkglsM6j3h29a" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -32,9 +55,14 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DEBUGGABLE_DEVICE" value="emulator-5554" />
+    <property name="DEBUGGABLE_PROCESS" value="io.keepcoding.eh_ho" />
+    <property name="DEBUGGER_ID" value="Auto" />
     <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Nexus_7_API_25" />
     <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-09-07T18:18:29.522Z" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SHOW_ALL_PROCESSES" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
@@ -117,25 +145,61 @@
       <screen x="0" y="23" width="1440" height="821" />
     </state>
     <state x="575" y="278" key="AndroidCreateXmlResourceDialog/0.23.1440.821@0.23.1440.821" timestamp="1599594973028" />
-    <state width="1398" height="98" key="GridCell.Tab.0.bottom" timestamp="1599596384121">
+    <state x="576" y="206" key="AndroidProcessChooserDialog" timestamp="1599830573180">
       <screen x="0" y="23" width="1440" height="821" />
     </state>
-    <state width="1398" height="98" key="GridCell.Tab.0.bottom/0.23.1440.821@0.23.1440.821" timestamp="1599596384121" />
-    <state width="1398" height="98" key="GridCell.Tab.0.center" timestamp="1599596384119">
+    <state x="576" y="206" key="AndroidProcessChooserDialog/0.23.1440.821@0.23.1440.821" timestamp="1599830573180" />
+    <state width="1398" height="226" key="GridCell.Tab.0.bottom" timestamp="1599830710447">
       <screen x="0" y="23" width="1440" height="821" />
     </state>
-    <state width="1398" height="98" key="GridCell.Tab.0.center/0.23.1440.821@0.23.1440.821" timestamp="1599596384119" />
-    <state width="1398" height="98" key="GridCell.Tab.0.left" timestamp="1599596384119">
+    <state width="1398" height="226" key="GridCell.Tab.0.bottom/0.23.1440.821@0.23.1440.821" timestamp="1599830710447" />
+    <state width="1398" height="226" key="GridCell.Tab.0.center" timestamp="1599830710445">
       <screen x="0" y="23" width="1440" height="821" />
     </state>
-    <state width="1398" height="98" key="GridCell.Tab.0.left/0.23.1440.821@0.23.1440.821" timestamp="1599596384119" />
-    <state width="1398" height="98" key="GridCell.Tab.0.right" timestamp="1599596384120">
+    <state width="1398" height="226" key="GridCell.Tab.0.center/0.23.1440.821@0.23.1440.821" timestamp="1599830710445" />
+    <state width="1398" height="226" key="GridCell.Tab.0.left" timestamp="1599830710444">
       <screen x="0" y="23" width="1440" height="821" />
     </state>
-    <state width="1398" height="98" key="GridCell.Tab.0.right/0.23.1440.821@0.23.1440.821" timestamp="1599596384120" />
-    <state x="390" y="266" key="com.intellij.ide.util.TipDialog" timestamp="1599502459278">
+    <state width="1398" height="226" key="GridCell.Tab.0.left/0.23.1440.821@0.23.1440.821" timestamp="1599830710444" />
+    <state width="1398" height="226" key="GridCell.Tab.0.right" timestamp="1599830710446">
       <screen x="0" y="23" width="1440" height="821" />
     </state>
-    <state x="390" y="266" key="com.intellij.ide.util.TipDialog/0.23.1440.821@0.23.1440.821" timestamp="1599502459278" />
+    <state width="1398" height="226" key="GridCell.Tab.0.right/0.23.1440.821@0.23.1440.821" timestamp="1599830710446" />
+    <state width="1398" height="226" key="GridCell.Tab.1.bottom" timestamp="1599830710449">
+      <screen x="0" y="23" width="1440" height="821" />
+    </state>
+    <state width="1398" height="226" key="GridCell.Tab.1.bottom/0.23.1440.821@0.23.1440.821" timestamp="1599830710449" />
+    <state width="1398" height="226" key="GridCell.Tab.1.center" timestamp="1599830710448">
+      <screen x="0" y="23" width="1440" height="821" />
+    </state>
+    <state width="1398" height="226" key="GridCell.Tab.1.center/0.23.1440.821@0.23.1440.821" timestamp="1599830710448" />
+    <state width="1398" height="226" key="GridCell.Tab.1.left" timestamp="1599830710447">
+      <screen x="0" y="23" width="1440" height="821" />
+    </state>
+    <state width="1398" height="226" key="GridCell.Tab.1.left/0.23.1440.821@0.23.1440.821" timestamp="1599830710447" />
+    <state width="1398" height="226" key="GridCell.Tab.1.right" timestamp="1599830710449">
+      <screen x="0" y="23" width="1440" height="821" />
+    </state>
+    <state width="1398" height="226" key="GridCell.Tab.1.right/0.23.1440.821@0.23.1440.821" timestamp="1599830710449" />
+    <state x="390" y="266" key="com.intellij.ide.util.TipDialog" timestamp="1599831753595">
+      <screen x="0" y="23" width="1440" height="821" />
+    </state>
+    <state x="390" y="266" key="com.intellij.ide.util.TipDialog/0.23.1440.821@0.23.1440.821" timestamp="1599831753595" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/topics/TopicsActivity.kt</url>
+          <line>100</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/topics/TopicsActivity.kt</url>
+          <line>21</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

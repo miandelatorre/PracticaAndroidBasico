@@ -74,8 +74,9 @@ class TopicsFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-
-        loadTopics()
+        context?.let {
+            this.topicsInteractionListener?.loadTopics(it, this.topicsAdapter)
+        }
 
     }
 
@@ -110,6 +111,7 @@ class TopicsFragment : Fragment() {
     }
 
     interface TopicsInteractionListener {
+        fun loadTopics(context: Context, topicsAdapter: TopicsAdapter)
         fun onCreateTopic()
         fun onLogout()
         fun onShowPosts(topic: Topic)

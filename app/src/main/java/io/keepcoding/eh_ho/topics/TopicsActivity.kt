@@ -1,12 +1,17 @@
 package io.keepcoding.eh_ho.topics
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import io.keepcoding.eh_ho.*
 import io.keepcoding.eh_ho.data.Topic
+import io.keepcoding.eh_ho.data.TopicsRepo
 import io.keepcoding.eh_ho.data.UserRepo
 import io.keepcoding.eh_ho.login.LoginActivity
+import kotlinx.android.synthetic.main.activity_topics.*
 
 const val TRANSACTION_CREATE_TOPIC = "create_topic"
 
@@ -16,11 +21,14 @@ class TopicsActivity: AppCompatActivity(), TopicsFragment.TopicsInteractionListe
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_topics)
-
-        if(isFirstTimeCreated(savedInstanceState))
+//        enableLoading()
+        if(isFirstTimeCreated(savedInstanceState)) {
             supportFragmentManager.beginTransaction()
                 .add(R.id.fragmentContainer, TopicsFragment())
                 .commit()
+        }
+//        enableLoading(false)
+
 /*
         val adapter = TopicsAdapter {
 //          Log.d(TopicsActivity::class.java.canonicalName, it.title)
@@ -66,5 +74,34 @@ class TopicsActivity: AppCompatActivity(), TopicsFragment.TopicsInteractionListe
         val intent = Intent(this, LoginActivity::class.java)
         startActivity(intent)
         finish()
+    }
+
+
+    override fun loadTopics(context: Context, topicsAdapter: TopicsAdapter) {
+            enableLoading()
+            context?.let {
+                TopicsRepo
+                    .getTopics(it,
+                        {
+                            //(listTopics.adapter as TopicsAdapter).setTopics(it)
+                            topicsAdapter.setTopics(it)
+                            enableLoading(false)
+                        },
+                        {
+                            enableLoading(false)
+                            // TODO: Manejo de errores
+                        }
+                    )
+            }
+    }
+
+    private fun enableLoading(enabled: Boolean = true) {
+        if(enabled) {
+            fragmentContainer.visibility = View.INVISIBLE
+            viewLoading.visibility = View.VISIBLE
+        } else {
+            fragmentContainer.visibility = View.VISIBLE
+            viewLoading.visibility = View.INVISIBLE
+        }
     }
 }

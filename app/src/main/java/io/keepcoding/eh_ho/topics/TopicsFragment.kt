@@ -74,25 +74,8 @@ class TopicsFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        context?.let {
-            this.topicsInteractionListener?.loadTopics(it, this.topicsAdapter)
-        }
+        this.topicsInteractionListener?.loadTopics(this.topicsAdapter)
 
-    }
-
-    private fun loadTopics() {
-        context?.let {
-            TopicsRepo
-                .getTopics(it.applicationContext,
-                    {
-                        //(listTopics.adapter as TopicsAdapter).setTopics(it)
-                        topicsAdapter.setTopics(it)
-                    },
-                    {
-                        // TODO: Manejo de errores
-                    }
-                )
-        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -111,7 +94,7 @@ class TopicsFragment : Fragment() {
     }
 
     interface TopicsInteractionListener {
-        fun loadTopics(context: Context, topicsAdapter: TopicsAdapter)
+        fun loadTopics(topicsAdapter: TopicsAdapter)
         fun onCreateTopic()
         fun onLogout()
         fun onShowPosts(topic: Topic)

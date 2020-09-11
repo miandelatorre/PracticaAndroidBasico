@@ -77,11 +77,10 @@ class TopicsActivity: AppCompatActivity(), TopicsFragment.TopicsInteractionListe
     }
 
 
-    override fun loadTopics(context: Context, topicsAdapter: TopicsAdapter) {
+    override fun loadTopics(topicsAdapter: TopicsAdapter) {
             enableLoading()
-            context?.let {
                 TopicsRepo
-                    .getTopics(it,
+                    .getTopics(this.applicationContext/*it*/,
                         {
                             //(listTopics.adapter as TopicsAdapter).setTopics(it)
                             topicsAdapter.setTopics(it)
@@ -92,7 +91,6 @@ class TopicsActivity: AppCompatActivity(), TopicsFragment.TopicsInteractionListe
                             // TODO: Manejo de errores
                         }
                     )
-            }
     }
 
     private fun enableLoading(enabled: Boolean = true) {

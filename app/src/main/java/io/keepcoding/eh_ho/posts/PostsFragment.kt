@@ -38,6 +38,7 @@ class PostsFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setHasOptionsMenu(true)
     }
 
     override fun onCreateView(
@@ -58,10 +59,24 @@ class PostsFragment : Fragment() {
 
     }
 
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.menu_posts, menu)
+        super.onCreateOptionsMenu(menu, inflater)
+    }
+
     override fun onResume() {
         super.onResume()
         this.postsInteractionListener?.loadPosts(this.postsAdapter)
     }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId) {
+            R.id.action_logout -> this.postsInteractionListener?.onLogout()
+        }
+
+        return super.onOptionsItemSelected(item)
+    }
+
 
     override fun onDetach() {
         super.onDetach()
@@ -70,6 +85,7 @@ class PostsFragment : Fragment() {
 
     interface PostsInteractionListener {
         fun loadPosts(postsAdapter: PostsAdapter)
+        fun onLogout()
     }
 
 }

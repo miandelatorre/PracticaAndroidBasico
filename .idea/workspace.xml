@@ -10,6 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3eab137c-7940-4daf-a3bf-a7782fd4120b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -19,9 +20,12 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/topics/TopicsActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/topics/TopicsActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/topics/TopicsFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/topics/TopicsFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_topics.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_topics.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,10 +141,14 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="575" y="278" key="AndroidCreateXmlResourceDialog" timestamp="1599594973028">
+    <state x="308" y="195" key="AndroidCreateResourceFileDialog" timestamp="1599905568124">
       <screen x="0" y="23" width="1440" height="821" />
     </state>
-    <state x="575" y="278" key="AndroidCreateXmlResourceDialog/0.23.1440.821@0.23.1440.821" timestamp="1599594973028" />
+    <state x="308" y="195" key="AndroidCreateResourceFileDialog/0.23.1440.821@0.23.1440.821" timestamp="1599905568124" />
+    <state x="575" y="278" key="AndroidCreateXmlResourceDialog" timestamp="1599910700686">
+      <screen x="0" y="23" width="1440" height="821" />
+    </state>
+    <state x="575" y="278" key="AndroidCreateXmlResourceDialog/0.23.1440.821@0.23.1440.821" timestamp="1599910700686" />
     <state x="576" y="206" key="AndroidProcessChooserDialog" timestamp="1599830573180">
       <screen x="0" y="23" width="1440" height="821" />
     </state>
@@ -177,22 +185,22 @@
       <screen x="0" y="23" width="1440" height="821" />
     </state>
     <state width="1398" height="226" key="GridCell.Tab.1.right/0.23.1440.821@0.23.1440.821" timestamp="1599830710449" />
-    <state x="390" y="266" key="com.intellij.ide.util.TipDialog" timestamp="1599831753595">
+    <state x="390" y="266" key="com.intellij.ide.util.TipDialog" timestamp="1599904695869">
       <screen x="0" y="23" width="1440" height="821" />
     </state>
-    <state x="390" y="266" key="com.intellij.ide.util.TipDialog/0.23.1440.821@0.23.1440.821" timestamp="1599831753595" />
+    <state x="390" y="266" key="com.intellij.ide.util.TipDialog/0.23.1440.821@0.23.1440.821" timestamp="1599904695869" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/topics/TopicsActivity.kt</url>
-          <line>98</line>
+          <line>93</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/topics/TopicsActivity.kt</url>
-          <line>21</line>
+          <line>23</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>

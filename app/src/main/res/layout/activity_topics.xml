@@ -34,6 +34,51 @@
             layout="@layout/view_loading"
             android:visibility="invisible"/>
 
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:id="@+id/errorLoading"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical"
+           android:padding="16dp"
+           android:visibility="invisible">
+
+           <androidx.appcompat.widget.AppCompatImageView
+               android:id="@+id/sadFace"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintHorizontal_chainStyle="spread"
+               app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintBottom_toBottomOf="parent"
+               app:srcCompat="@drawable/sad_face" />
+
+           <TextView
+               android:id="@+id/labelErrorLoading"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:gravity="center"
+               android:textSize="27sp"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/sadFace"
+               android:text="@string/errorLoadingTopics" />
+
+           <androidx.appcompat.widget.AppCompatButton
+               android:id="@+id/buttonRetry"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="16dp"
+               android:text="@string/retry"
+               android:textColor="#fff"
+               android:layout_marginHorizontal="56dp"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/labelErrorLoading"
+               app:backgroundTint="@color/colorPrimary" />
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+
    </FrameLayout>
 
 </LinearLayout>

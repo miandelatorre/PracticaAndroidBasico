@@ -17,7 +17,7 @@ class TopicsFragment : Fragment() {
 
     var topicsInteractionListener: TopicsInteractionListener? = null
 
-    private val topicsAdapter: TopicsAdapter by lazy {
+    val topicsAdapter: TopicsAdapter by lazy {
         val adapter = TopicsAdapter {
             this.topicsInteractionListener?.onShowPosts(it)
         }

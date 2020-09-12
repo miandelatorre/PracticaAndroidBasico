@@ -18,32 +18,24 @@ const val TRANSACTION_CREATE_TOPIC = "create_topic"
 class TopicsActivity: AppCompatActivity(), TopicsFragment.TopicsInteractionListener,
             CreateTopicFragment.CreateTopicInteractionListener{
 
+    lateinit var topicsFragment: TopicsFragment
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_topics)
-//        enableLoading()
+
         if(isFirstTimeCreated(savedInstanceState)) {
+            topicsFragment = TopicsFragment()
             supportFragmentManager.beginTransaction()
-                .add(R.id.fragmentContainer, TopicsFragment())
+                .add(R.id.fragmentContainer, topicsFragment)
                 .commit()
         }
-//        enableLoading(false)
 
-/*
-        val adapter = TopicsAdapter {
-//          Log.d(TopicsActivity::class.java.canonicalName, it.title)
-            goToPosts(it)
+        buttonRetry.setOnClickListener(){
+            this.loadTopics(topicsFragment.topicsAdapter)
         }
-
-        adapter.setTopics(TopicsRepo.topics)
-
-        listTopics.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-        listTopics.adapter = adapter
-
-//      val list: RecyclerView = findViewById(R.id.list_topics)
-//      list.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-*/
     }
+
 
     private fun goToPosts(topic: Topic) {
         val intent = Intent(this, PostsActivity::class.java)
@@ -79,15 +71,18 @@ class TopicsActivity: AppCompatActivity(), TopicsFragment.TopicsInteractionListe
 
     override fun loadTopics(topicsAdapter: TopicsAdapter) {
             enableLoading()
+            showError(false)
                 TopicsRepo
                     .getTopics(this.applicationContext/*it*/,
                         {
                             //(listTopics.adapter as TopicsAdapter).setTopics(it)
                             topicsAdapter.setTopics(it)
                             enableLoading(false)
+                            showError(false)
                         },
                         {
                             enableLoading(false)
+                            showError()
                             // TODO: Manejo de errores
                         }
                     )
@@ -100,6 +95,14 @@ class TopicsActivity: AppCompatActivity(), TopicsFragment.TopicsInteractionListe
         } else {
             fragmentContainer.visibility = View.VISIBLE
             viewLoading.visibility = View.INVISIBLE
+        }
+    }
+
+    private fun showError(enabled: Boolean = true) {
+        if(enabled) {
+            errorLoading.visibility = View.VISIBLE
+        } else {
+            errorLoading.visibility = View.INVISIBLE
         }
     }
 }

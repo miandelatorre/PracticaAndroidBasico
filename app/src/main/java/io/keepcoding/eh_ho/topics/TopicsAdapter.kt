@@ -34,9 +34,7 @@ class TopicsAdapter(val topicClickListener: ((Topic) -> Unit)? = null) :
     override fun onCreateViewHolder(list: ViewGroup, viewType: Int): TopicHolder {
         val contex = list.context
         val view = list.inflate(R.layout.item_topic)
-        //LayoutInflater.from(list.context).inflate(R.layout.item_topic, list, false)
 
-//        Log.d(this::class.java.canonicalName, "On create view")
         return TopicHolder(view)
     }
 

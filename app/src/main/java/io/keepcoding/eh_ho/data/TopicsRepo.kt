@@ -40,12 +40,6 @@ object TopicsRepo {
             .add(request)
 
     }
-/*    get() {
-        if(field.isEmpty())
-            field.addAll(createDummyTopics())
-        return field
-    }
-*/
 
     fun addTopic(
         context: Context,

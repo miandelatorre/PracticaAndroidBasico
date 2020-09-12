@@ -2,6 +2,7 @@ package io.keepcoding.eh_ho.data
 
 import org.json.JSONObject
 import java.text.SimpleDateFormat
+import java.time.format.DateTimeFormatter
 import java.util.*
 
 data class Topic(
@@ -34,7 +35,7 @@ data class Topic(
 
         fun parseTopic(jsonObject: JSONObject): Topic {
             val date = jsonObject.getString("created_at")
-                .replace("Z","+0000")
+                .replace("Z", "+0000")
 
             val dateFormat = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ", Locale.getDefault())
             val dateFormatted = dateFormat.parse(date) ?: Date()
@@ -50,7 +51,7 @@ data class Topic(
     }
 
     val MINUTE_MILLIS = 1000L * 60
-    val HOUR_MILLIS = MINUTE_MILLIS *60
+    val HOUR_MILLIS = MINUTE_MILLIS * 60
     val DAY_MILLIS = HOUR_MILLIS * 24
     val MONTH_MILLIS = DAY_MILLIS * 30
     val YEAR_MILLIS = MONTH_MILLIS * 12
@@ -62,7 +63,7 @@ data class Topic(
      * @param Date Fecha de consulta '01/01/2020 11:00:00'
      * @return { unit: "Hora", amount: 1 }
      **/
-    fun getTimeOffset(dateToCompare: Date = Date()) : TimeOffset {
+    fun getTimeOffset(dateToCompare: Date = Date()): TimeOffset {
         val current = dateToCompare.time
         val diff = current - this.date.time
 
@@ -99,4 +100,47 @@ data class Topic(
         return TimeOffset(0, Calendar.MINUTE)
     }
 }
+
+data class Post (
+    val author: String = "",
+    val content: String = "",
+    val date: String = ""){
+
+    companion object {
+
+        fun parsePostsList(response: JSONObject): List<Post> {
+            val objectList = response.getJSONObject("post_stream")
+                .getJSONArray("posts")
+
+            val posts = mutableListOf<Post>()
+
+            //[1, 2, 3].map({})
+
+            for (i in 0 until objectList.length()) {
+                val parsedTopic = parsePost(objectList.getJSONObject(i))
+                posts.add(parsedTopic)
+            }
+
+            return posts
+        }
+
+        fun parsePost(jsonObject: JSONObject): Post {
+            val date = jsonObject.getString("created_at")
+                .replace("Z", "+0000")
+
+            val dateFormat = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ", Locale.getDefault())
+            val toStringDateFormat = SimpleDateFormat("dd/MM/yyyy")
+            val dateFormatted = dateFormat.parse(date) ?: Date()
+            val stringDateFormatted = toStringDateFormat.format(dateFormatted)
+
+            return Post(
+                author = jsonObject.getString("name").toString(),
+                content = jsonObject.getString("cooked").toString().replace("<p>", "").replace("</p>", ""),
+                date = stringDateFormatted
+            )
+        }
+
+    }
+}
+
 

@@ -75,7 +75,6 @@ class TopicsFragment : Fragment() {
     override fun onResume() {
         super.onResume()
         this.topicsInteractionListener?.loadTopics(this.topicsAdapter)
-
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

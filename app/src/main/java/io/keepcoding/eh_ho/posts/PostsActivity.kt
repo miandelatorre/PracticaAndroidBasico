@@ -3,6 +3,7 @@ package io.keepcoding.eh_ho.posts
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import io.keepcoding.eh_ho.R
 import io.keepcoding.eh_ho.data.PostsRepo
 import io.keepcoding.eh_ho.data.Topic
@@ -10,13 +11,19 @@ import io.keepcoding.eh_ho.data.TopicsRepo
 import io.keepcoding.eh_ho.data.UserRepo
 import io.keepcoding.eh_ho.isFirstTimeCreated
 import io.keepcoding.eh_ho.login.LoginActivity
+import io.keepcoding.eh_ho.topics.CreateTopicFragment
+import io.keepcoding.eh_ho.topics.TRANSACTION_CREATE_TOPIC
 import io.keepcoding.eh_ho.topics.TopicsAdapter
 import io.keepcoding.eh_ho.topics.TopicsFragment
 import kotlinx.android.synthetic.main.activity_posts.*
+import kotlinx.android.synthetic.main.activity_posts.fragmentContainer
+import kotlinx.android.synthetic.main.activity_topics.*
 
 const val EXTRA_TOPIC_ID = "TOPIC_ID"
+const val TRANSACTION_CREATE_POST = "create_post"
 
-class PostsActivity : AppCompatActivity(), PostsFragment.PostsInteractionListener {
+class PostsActivity : AppCompatActivity(), PostsFragment.PostsInteractionListener,
+    CreatePostFragment.CreatePostInteractionListener {
 
     lateinit var topicId: String
 
@@ -33,6 +40,18 @@ class PostsActivity : AppCompatActivity(), PostsFragment.PostsInteractionListene
                     .commit()
             }
 
+    }
+
+
+    override fun onCreateNewPost() {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragmentContainer, CreatePostFragment())
+            .addToBackStack(TRANSACTION_CREATE_POST)
+            .commit()
+    }
+
+    override fun onPostCreated() {
+        supportFragmentManager.popBackStack()
     }
 
     override fun onLogout() {

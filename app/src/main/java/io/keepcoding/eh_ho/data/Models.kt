@@ -132,6 +132,7 @@ data class Post (
             val toStringDateFormat = SimpleDateFormat("dd/MM/yyyy")
             val dateFormatted = dateFormat.parse(date) ?: Date()
             val stringDateFormatted = toStringDateFormat.format(dateFormatted)
+            val charset = Charsets.UTF_8
 
             return Post(
                 author = jsonObject.getString("name").toString(),

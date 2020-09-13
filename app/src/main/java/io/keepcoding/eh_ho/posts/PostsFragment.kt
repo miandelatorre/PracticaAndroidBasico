@@ -72,6 +72,7 @@ class PostsFragment : Fragment() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId) {
             R.id.action_logout -> this.postsInteractionListener?.onLogout()
+            R.id.action_new_post -> this.postsInteractionListener?.onCreateNewPost()
         }
 
         return super.onOptionsItemSelected(item)
@@ -86,6 +87,7 @@ class PostsFragment : Fragment() {
     interface PostsInteractionListener {
         fun loadPosts(postsAdapter: PostsAdapter)
         fun onLogout()
+        fun onCreateNewPost()
     }
 
 }

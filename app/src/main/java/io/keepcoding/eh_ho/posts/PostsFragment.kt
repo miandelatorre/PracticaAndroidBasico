@@ -17,7 +17,9 @@ import kotlinx.android.synthetic.main.fragment_posts.*
 import kotlinx.android.synthetic.main.fragment_topics.*
 import java.lang.IllegalArgumentException
 
-class PostsFragment : Fragment() {
+class PostsFragment(topicId: String) : Fragment() {
+
+    val topicId = topicId
 
     var postsInteractionListener: PostsInteractionListener? = null
 
@@ -72,7 +74,7 @@ class PostsFragment : Fragment() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId) {
             R.id.action_logout -> this.postsInteractionListener?.onLogout()
-            R.id.action_new_post -> this.postsInteractionListener?.onCreateNewPost()
+            R.id.action_new_post -> this.postsInteractionListener?.onCreateNewPost(topicId)
         }
 
         return super.onOptionsItemSelected(item)
@@ -87,7 +89,7 @@ class PostsFragment : Fragment() {
     interface PostsInteractionListener {
         fun loadPosts(postsAdapter: PostsAdapter)
         fun onLogout()
-        fun onCreateNewPost()
+        fun onCreateNewPost(topicId: String)
     }
 
 }

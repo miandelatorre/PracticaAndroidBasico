@@ -36,16 +36,16 @@ class PostsActivity : AppCompatActivity(), PostsFragment.PostsInteractionListene
 
             if(isFirstTimeCreated(savedInstanceState)) {
                 supportFragmentManager.beginTransaction()
-                    .add(R.id.fragmentContainer, PostsFragment())
+                    .add(R.id.fragmentContainer, PostsFragment(topicId))
                     .commit()
             }
 
     }
 
 
-    override fun onCreateNewPost() {
+    override fun onCreateNewPost(topicId: String) {
         supportFragmentManager.beginTransaction()
-            .replace(R.id.fragmentContainer, CreatePostFragment())
+            .replace(R.id.fragmentContainer, CreatePostFragment(topicId))
             .addToBackStack(TRANSACTION_CREATE_POST)
             .commit()
     }

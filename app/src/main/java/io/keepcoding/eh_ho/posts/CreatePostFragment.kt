@@ -12,12 +12,13 @@ import io.keepcoding.eh_ho.data.*
 import io.keepcoding.eh_ho.inflate
 import io.keepcoding.eh_ho.topics.CreateTopicFragment
 import kotlinx.android.synthetic.main.fragment_create_post.*
-import kotlinx.android.synthetic.main.fragment_create_topic.*
 import java.lang.IllegalArgumentException
 
 const val TAG_LOADING_DIALOG = "loading_dialog"
 
-class CreatePostFragment : Fragment() {
+class CreatePostFragment(topicId: String) : Fragment() {
+
+    var topicId = topicId
 
     var interactionListener: CreatePostFragment.CreatePostInteractionListener? = null
     val loadingDialogFragment : LoadingDialogFragment by lazy {
@@ -45,6 +46,11 @@ class CreatePostFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         return container?.inflate(R.layout.fragment_create_post)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        fragmentTopicId.text = topicId
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
@@ -77,7 +83,7 @@ class CreatePostFragment : Fragment() {
         enableLoadingDialog()
 
         val model = CreatePostModel(
-            Integer(inputTopic.text.toString().toInt()),
+            Integer(topicId.toInt()),
             inputPost.text.toString()
         )
 
@@ -119,15 +125,15 @@ class CreatePostFragment : Fragment() {
 
 
     private fun showErrors() {
-        if (inputTopic.text.isEmpty())
-            inputTopic.error = getString(R.string.error_empty)
+/*        if (inputTopic.text.isEmpty())
+            inputTopic.error = getString(R.string.error_empty)*/
         if (inputPost.text.isEmpty())
             inputPost.error = getString(R.string.error_empty)
 
     }
 
 
-    private fun isFormValid() = inputTopic.text.isNotEmpty() && inputPost.text.isNotEmpty()
+    private fun isFormValid() = /*inputTopic.text.isNotEmpty() && */inputPost.text.isNotEmpty()
 
     interface CreatePostInteractionListener {
         fun onPostCreated()

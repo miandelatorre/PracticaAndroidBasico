@@ -16,9 +16,10 @@ import java.lang.IllegalArgumentException
 
 const val TAG_LOADING_DIALOG = "loading_dialog"
 
-class CreatePostFragment(topicId: String) : Fragment() {
+class CreatePostFragment(topicId: String, topicTitle: String) : Fragment() {
 
     var topicId = topicId
+    var topicTitle = topicTitle
 
     var interactionListener: CreatePostFragment.CreatePostInteractionListener? = null
     val loadingDialogFragment : LoadingDialogFragment by lazy {
@@ -50,7 +51,13 @@ class CreatePostFragment(topicId: String) : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        fragmentTopicId.text = topicId
+        topicTitle?.let {
+            fragmentTopicId.text = topicTitle
+        }
+
+        if (fragmentTopicId.text.equals("")) {
+            fragmentTopicId.text = topicId
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {

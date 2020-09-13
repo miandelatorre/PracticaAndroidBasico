@@ -20,32 +20,36 @@ import kotlinx.android.synthetic.main.activity_posts.fragmentContainer
 import kotlinx.android.synthetic.main.activity_topics.*
 
 const val EXTRA_TOPIC_ID = "TOPIC_ID"
+const val EXTRA_TOPIC_TITLE = "TOPIC_TITLE"
 const val TRANSACTION_CREATE_POST = "create_post"
 
 class PostsActivity : AppCompatActivity(), PostsFragment.PostsInteractionListener,
     CreatePostFragment.CreatePostInteractionListener {
 
     lateinit var topicId: String
+    lateinit var topicTitle: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_posts)
 
             topicId = intent.getStringExtra(EXTRA_TOPIC_ID) ?:""
+            topicTitle = intent.getStringExtra(EXTRA_TOPIC_TITLE) ?:""
+
             val topic: Topic? = TopicsRepo.getTopic(topicId)
 
             if(isFirstTimeCreated(savedInstanceState)) {
                 supportFragmentManager.beginTransaction()
-                    .add(R.id.fragmentContainer, PostsFragment(topicId))
+                    .add(R.id.fragmentContainer, PostsFragment(topicId, topicTitle))
                     .commit()
             }
 
     }
 
 
-    override fun onCreateNewPost(topicId: String) {
+    override fun onCreateNewPost(topicId: String, topicTitle: String) {
         supportFragmentManager.beginTransaction()
-            .replace(R.id.fragmentContainer, CreatePostFragment(topicId))
+            .replace(R.id.fragmentContainer, CreatePostFragment(topicId, topicTitle))
             .addToBackStack(TRANSACTION_CREATE_POST)
             .commit()
     }

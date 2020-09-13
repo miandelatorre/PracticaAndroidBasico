@@ -10,6 +10,7 @@ import io.keepcoding.eh_ho.data.TopicsRepo
 import io.keepcoding.eh_ho.data.UserRepo
 import io.keepcoding.eh_ho.login.LoginActivity
 import io.keepcoding.eh_ho.posts.EXTRA_TOPIC_ID
+import io.keepcoding.eh_ho.posts.EXTRA_TOPIC_TITLE
 import io.keepcoding.eh_ho.posts.PostsActivity
 import kotlinx.android.synthetic.main.activity_topics.*
 
@@ -40,6 +41,11 @@ class TopicsActivity: AppCompatActivity(), TopicsFragment.TopicsInteractionListe
     private fun goToPosts(topic: Topic) {
         val intent = Intent(this, PostsActivity::class.java)
         intent.putExtra(EXTRA_TOPIC_ID, topic.id)
+        val topicTitle = TopicsRepo.getTopic(topic.id)?.title
+        topicTitle?.let {
+            intent.putExtra(EXTRA_TOPIC_TITLE,it)
+        }
+
         startActivity(intent)
     }
 

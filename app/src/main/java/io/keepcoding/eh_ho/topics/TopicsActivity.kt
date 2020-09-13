@@ -41,7 +41,7 @@ class TopicsActivity: AppCompatActivity(), TopicsFragment.TopicsInteractionListe
     private fun goToPosts(topic: Topic) {
         val intent = Intent(this, PostsActivity::class.java)
         intent.putExtra(EXTRA_TOPIC_ID, topic.id)
-        val topicTitle = TopicsRepo.getTopic(topic.id)?.title
+        val topicTitle = topicsFragment.topicsAdapter.getTopic(topic.id)?.title
         topicTitle?.let {
             intent.putExtra(EXTRA_TOPIC_TITLE,it)
         }

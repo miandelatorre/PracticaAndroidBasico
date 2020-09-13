@@ -20,10 +20,9 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/posts/CreatePostFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/posts/CreatePostFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/posts/PostsActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/posts/PostsActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/posts/PostsFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/posts/PostsFragment.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/topics/TopicsActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/topics/TopicsActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/topics/TopicsAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/io/keepcoding/eh_ho/topics/TopicsAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_create_post.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_create_post.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,10 +160,11 @@
     <state x="410" y="186" key="AndroidCreateResourceFileDialog/0.23.1440.821@0.23.1440.821" timestamp="1599989827449" />
     <state x="487" y="189" key="AndroidCreateResourceFileDialog/0.23.1440.822@0.23.1440.822" timestamp="1599991104598" />
     <state x="371" y="240" key="AndroidCreateResourceFileDialog/0.23.1440.823@0.23.1440.823" timestamp="1599920530788" />
-    <state x="575" y="279" key="AndroidCreateXmlResourceDialog" timestamp="1600002790012">
-      <screen x="0" y="23" width="1440" height="823" />
+    <state x="575" y="279" key="AndroidCreateXmlResourceDialog" timestamp="1600010679646">
+      <screen x="0" y="23" width="1440" height="822" />
     </state>
     <state x="575" y="278" key="AndroidCreateXmlResourceDialog/0.23.1440.821@0.23.1440.821" timestamp="1599990816430" />
+    <state x="575" y="279" key="AndroidCreateXmlResourceDialog/0.23.1440.822@0.23.1440.822" timestamp="1600010679646" />
     <state x="575" y="279" key="AndroidCreateXmlResourceDialog/0.23.1440.823@0.23.1440.823" timestamp="1600002790012" />
     <state x="576" y="206" key="AndroidProcessChooserDialog" timestamp="1600005690281">
       <screen x="0" y="23" width="1440" height="823" />

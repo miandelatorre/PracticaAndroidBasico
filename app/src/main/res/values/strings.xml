@@ -58,5 +58,6 @@
     <string name="hint_post">Post</string>
     <string name="label_creating_post">Creating Post</string>
     <string name="topic_id">Topic Id</string>
+    <string name="topic_title">Topic Title</string>
 
 </resources>

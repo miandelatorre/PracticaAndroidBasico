@@ -20,7 +20,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                android:text="@string/topic_id"/>
+                android:text="@string/topic_title"/>
 
             <TextView
                 android:id="@+id/fragmentTopicId"

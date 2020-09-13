@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import io.keepcoding.eh_ho.R
 import io.keepcoding.eh_ho.data.Topic
+import io.keepcoding.eh_ho.data.TopicsRepo
 import io.keepcoding.eh_ho.inflate
 import kotlinx.android.synthetic.main.item_topic.view.*
 import java.lang.IllegalArgumentException
@@ -61,6 +62,8 @@ class TopicsAdapter(val topicClickListener: ((Topic) -> Unit)? = null) :
         this.topics.addAll(topics)
         notifyDataSetChanged()
     }
+
+    fun getTopic(id: String): Topic? = this.topics.find { it.id == id }
 
     inner class TopicHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var topic: Topic? = null
